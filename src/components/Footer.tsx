@@ -64,7 +64,7 @@ export default function Footer() {
               required
             />
 
-            <PrimaryButton className='rounded-none font-bold text-sm'>
+            <PrimaryButton className='!rounded-none font-bold text-sm'>
               Enviar
             </PrimaryButton>
           </form>

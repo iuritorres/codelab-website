@@ -35,7 +35,9 @@ const config: Config = {
         primary: '4px',
         media: '24px 0 24px 0',
       },
-      fontFamily: { poppins: 'var(--font-poppins)' },
+      fontFamily: {
+        ubuntu: ['var(--font-ubuntu)'],
+      },
     },
   },
   plugins: [],

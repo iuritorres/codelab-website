@@ -1,17 +1,51 @@
 import type { Metadata } from 'next';
-import { Poppins, Ubuntu } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 
-const ubuntu = Ubuntu({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-const poppins = Poppins({
-  weight: ['400', '500', '600', '700', '800'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
+const ubuntu = localFont({
+  src: [
+    {
+      path: './fonts/ubuntu/Ubuntu-Light.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/ubuntu/Ubuntu-LightItalic.ttf',
+      weight: '300',
+      style: 'italic',
+    },
+    {
+      path: './fonts/ubuntu/Ubuntu-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/ubuntu/Ubuntu-Italic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: './fonts/ubuntu/Ubuntu-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/ubuntu/Ubuntu-MediumItalic.ttf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: './fonts/ubuntu/Ubuntu-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/ubuntu/Ubuntu-BoldItalic.ttf',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-ubuntu',
 });
 
 export const metadata: Metadata = {
@@ -48,9 +82,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-br'>
-      <body className={`${ubuntu.className} ${poppins.variable}`}>
-        {children}
-      </body>
+      <body className={`${ubuntu.className}`}>{children}</body>
     </html>
   );
 }
