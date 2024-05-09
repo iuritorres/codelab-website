@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
 
       {/* SIMPLIFIED MANAGEMENT */}
-      <section className='w-full pt-96 pb-20'>
+      {/* <section className='w-full pt-96 pb-20'>
         <div className='mx-28 flex justify-between items-center'>
           <div className='w-1/2'>
             <span className='text-md text-primary-dark'>Nosso Software</span>
@@ -57,10 +57,10 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* OUR PRODUCTS */}
-      <section className='bg-light w-full py-10'>
+      {/* <section className='bg-light w-full py-10'>
         <div className='mx-28 flex py-5'>
           <div>
             <span className='text-md text-primary-dark'>Nosso Software</span>
@@ -114,10 +114,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* BENEFITS */}
-      <section className='w-100 py-5 mb-5'>
+      {/* <section className='w-100 py-5 mb-5'>
         <div className='mx-28 py-5 grid grid-cols-2'>
           <div className='col-span-1'>
             <a
@@ -138,10 +138,10 @@ export default function Home() {
               proporcionam resultados tangíveis para instituições educacionais,
               incluindo aumento de produtividade, redução de erros, melhor
               comunicação e otimização do tempo.
-            </p>
+            </p> */}
 
             {/* PROGRESS BARS */}
-            {[
+            {/* {[
               { title: 'Aumento de Produtividade', value: 40 },
               { title: 'Redução de Retrabalhos', value: 70 },
               { title: 'Melhoria na Comunicação', value: 50 },
@@ -161,9 +161,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
