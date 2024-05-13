@@ -34,7 +34,7 @@ export default function Navbar() {
           alt='bytecode - coding the future logo'
         />
 
-        <h2 className='text-dark-gray text-[20px] sm:text-[23.35px] md:text-[25px] lg:text-[28px] pb-1 font-medium'>
+        <h2 className='text-dark-gray text-[20px] sm:text-[23.35px] md:text-[25px]  pb-1 font-medium'>
           byte<span className='text-secondary'>code</span>
         </h2>
       </Link>
@@ -45,9 +45,9 @@ export default function Navbar() {
         '
       >
         <NavbarItem>Produtos</NavbarItem>
-        <NavbarItem className='text-right '>Clientes</NavbarItem>
+        <NavbarItem className='text-right'>Clientes</NavbarItem>
         <NavbarItem>Conteúdos</NavbarItem>
-        <NavbarItem className='text-right '>Bytecode</NavbarItem>
+        <NavbarItem className='text-right'>Bytecode</NavbarItem>
       </ul>
     </div>
   );

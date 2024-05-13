@@ -1,3 +1,4 @@
+import Card from '@/components/Card';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import HorizontalCard from '@/components/HorizontalCard';
@@ -8,59 +9,153 @@ export default function Home() {
     <>
       <Header />
 
-      {/* SIMPLIFIED MANAGEMENT */}
-      {/* <section className='w-full pt-96 pb-20'>
-        <div className='mx-28 flex justify-between items-center'>
-          <div className='w-1/2'>
-            <span className='text-md text-primary-dark'>Nosso Software</span>
-            <h1 className='text-2xl text-dark-gray2 font-medium'>
-              Gestão Simplificada
-            </h1>
+      <main className='relative'>
+        {/* CARDS */}
+        <div className='mx-6 w-auto flex flex-wrap gap-7 absolute -top-14'>
+          <Card
+            icon='forum'
+            title='Comunicação Eficiente'
+            description='Nosso software de gestão educacional oferece recursos avançados de comunicação que facilitam a comunicação entre escola, pais e alunos, permitindo a troca de informações importantes.'
+            className='w-full lg:w-[48%] xl:w-[23%]'
+          />
 
-            <p className='text-light-gray pr-9 mt-7'>
-              Nosso software de gestão educacional oferece um conjunto
-              abrangente de funcionalidades para atender às necessidades
-              específicas das instituições de ensino. Gerencie alunos, turmas,
-              matrículas, notas, frequência, calendários acadêmicos e muito mais
-              em uma única plataforma fácil de usar.
-            </p>
+          <Card
+            icon='account_tree'
+            title='Integração Simplificada'
+            description='Nosso software de gestão educacional permite a integração simplificada com outros sistemas utilizados pela sua instituição.'
+            className='w-full lg:w-[48%] xl:w-[23%]'
+          />
 
-            <div className='flex items-center gap-10 mt-8 text-primary-dark'>
-              <div className='text-3xl flex gap-4'>
-                <span className='material-symbols-rounded text-4xl'>school</span>
-                <div>
-                  <span className='font-bold'>20+</span>
-                  <p className='text-light-gray text-base'>Clientes</p>
+          <Card
+            icon='rebase'
+            title='Automação de Processos'
+            description='Reduza a carga de trabalho administrativo e aumente a eficiência com a automação de processos.'
+            className='w-full lg:w-[48%] xl:w-[23%]'
+          />
+
+          <Card
+            icon='support_agent'
+            title='Suporte Ativo'
+            description='Oferecemos suporte técnico dedicado, com uma equipe especializada disponível para responder às suas perguntas e resolver quaisquer problemas.'
+            className='w-full lg:w-[48%] xl:w-[23%]'
+          />
+        </div>
+
+        {/* SIMPLIFIED MANAGEMENT */}
+        {/* <section className='w-full pt-96 pb-20'>
+          <div className='mx-28 flex justify-between items-center'>
+            <div className='w-1/2'>
+              <span className='text-md text-primary-dark'>Nosso Software</span>
+              <h1 className='text-2xl text-dark-gray2 font-medium'>
+                Gestão Simplificada
+              </h1>
+
+              <p className='text-light-gray pr-9 mt-7'>
+                Nosso software de gestão educacional oferece um conjunto
+                abrangente de funcionalidades para atender às necessidades
+                específicas das instituições de ensino. Gerencie alunos, turmas,
+                matrículas, notas, frequência, calendários acadêmicos e muito
+                mais em uma única plataforma fácil de usar.
+              </p>
+
+              <div className='flex items-center gap-10 mt-8 text-primary-dark'>
+                <div className='text-3xl flex gap-4'>
+                  <span className='material-symbols-rounded text-4xl'>
+                    school
+                  </span>
+                  <div>
+                    <span className='font-bold'>20+</span>
+                    <p className='text-light-gray text-base'>Clientes</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className='text-3xl flex gap-4'>
-                <span className='material-symbols-rounded text-4xl'>groups</span>
-                <div>
-                  <span className='font-bold'>12+</span>
-                  <p className='text-light-gray text-base'>Desenvolvedores</p>
+                <div className='text-3xl flex gap-4'>
+                  <span className='material-symbols-rounded text-4xl'>
+                    groups
+                  </span>
+                  <div>
+                    <span className='font-bold'>12+</span>
+                    <p className='text-light-gray text-base'>Desenvolvedores</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className='w-1/2'>
-            <a
-              href='#'
-              className='rounded-media shadow-media flex justify-center items-center
+            <div className='w-1/2'>
+              <a
+                href='#'
+                className='rounded-media shadow-media flex justify-center items-center
               h-80 bg-homePageVideo bg-center bg-cover hover:opacity-90
               '
-            >
-              <span className='material-symbols-rounded text-7xl text-primary-dark'>
-                play_circle
-              </span>
-            </a>
+              >
+                <span className='material-symbols-rounded text-7xl text-primary-dark'>
+                  play_circle
+                </span>
+              </a>
+            </div>
           </div>
-        </div>
-      </section> */}
+        </section> */}
 
-      {/* OUR PRODUCTS */}
-      {/* <section className='bg-light w-full py-10'>
+        <section className='w-full py-10 absolute top-[1200px] bg-light'>
+          <div className='mx-6 grid grid-rows-2 xl:px-28'>
+            <div className='row-span-1'>
+              <span className='text-md text-primary-dark'>Nosso Software</span>
+              <h1 className='text-2xl text-dark-gray2 font-medium'>
+                Gestão Simplificada
+              </h1>
+
+              <p className='text-light-gray pr-9 mt-7'>
+                Nosso software de gestão educacional oferece um conjunto
+                abrangente de funcionalidades para atender às necessidades
+                específicas das instituições de ensino. Gerencie alunos, turmas,
+                matrículas, notas, frequência, calendários acadêmicos e muito
+                mais em uma única plataforma fácil de usar.
+              </p>
+
+              <div className='flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-10 my-8 text-primary-dark'>
+                <div className='text-3xl flex gap-4'>
+                  <span className='material-symbols-rounded text-4xl'>
+                    school
+                  </span>
+                  <div>
+                    <span className='font-bold'>20+</span>
+                    <p className='text-light-gray text-base '>
+                      Clientes
+                    </p>
+                  </div>
+                </div>
+
+                <div className='text-3xl flex gap-4'>
+                  <span className='material-symbols-rounded text-4xl'>
+                    groups
+                  </span>
+                  <div>
+                    <span className='font-bold'>12+</span>
+                    <p className='text-light-gray text-base '>
+                      Desenvolvedores
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className='row-span-1'>
+              <a
+                href='#'
+                className='rounded-media shadow-media flex justify-center items-center
+                h-1/2 w-full bg-homePageVideo bg-center bg-cover hover:opacity-90
+                '
+              >
+                <span className='material-symbols-rounded text-7xl text-primary-dark'>
+                  play_circle
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* OUR PRODUCTS */}
+        {/* <section className='bg-light w-full py-10'>
         <div className='mx-28 flex py-5'>
           <div>
             <span className='text-md text-primary-dark'>Nosso Software</span>
@@ -116,8 +211,8 @@ export default function Home() {
         </div>
       </section> */}
 
-      {/* BENEFITS */}
-      {/* <section className='w-100 py-5 mb-5'>
+        {/* BENEFITS */}
+        {/* <section className='w-100 py-5 mb-5'>
         <div className='mx-28 py-5 grid grid-cols-2'>
           <div className='col-span-1'>
             <a
@@ -140,8 +235,8 @@ export default function Home() {
               comunicação e otimização do tempo.
             </p> */}
 
-            {/* PROGRESS BARS */}
-            {/* {[
+        {/* PROGRESS BARS */}
+        {/* {[
               { title: 'Aumento de Produtividade', value: 40 },
               { title: 'Redução de Retrabalhos', value: 70 },
               { title: 'Melhoria na Comunicação', value: 50 },
@@ -162,6 +257,7 @@ export default function Home() {
           </div>
         </div>
       </section> */}
+      </main>
 
       {/* <Footer /> */}
     </>
