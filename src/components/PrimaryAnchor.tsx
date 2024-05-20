@@ -1,17 +1,14 @@
-interface PrimaryAnchorProps {
-  children: string;
-  href: string;
-  className?: string;
-}
+interface PrimaryAnchorProps
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {}
 
-export function PrimaryAnchor({
+export const PrimaryAnchor: React.FC<PrimaryAnchorProps> = ({
   children,
-  href,
   className,
-}: PrimaryAnchorProps) {
+  ...rest
+}) => {
   return (
     <a
-      href={href}
+      {...rest}
       target='_blank'
       className={`px-6 py-4 w-fit text-center text-lg text-light
       rounded-primary bg-primary hover:bg-primary-dark ${className}`}
@@ -19,4 +16,4 @@ export function PrimaryAnchor({
       {children}
     </a>
   );
-}
+};

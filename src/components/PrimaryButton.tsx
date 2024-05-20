@@ -1,21 +1,18 @@
-interface PrimaryButtonProps {
-  children: string;
-  onClick?: () => void;
-  className?: string;
-}
+interface PrimaryButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
-export function PrimaryButton({
+export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   children,
-  onClick,
   className,
-}: PrimaryButtonProps) {
+  ...rest
+}) => {
   return (
     <button
-      onClick={onClick}
+      {...rest}
       className={`px-6 py-4 w-fit text-center text-lg text-light
       rounded-primary bg-primary hover:bg-primary-dark ${className}`}
     >
       {children}
     </button>
   );
-}
+};
