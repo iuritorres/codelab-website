@@ -1,4 +1,5 @@
-import { PrimaryAnchor, PrimaryButton } from '@/components';
+import { PrimaryAnchor } from '@/components';
+import { FooterNewsletter } from '@/components/FooterNewsletter';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../public/images/logo-svg.svg';
@@ -21,57 +22,10 @@ const quickLinks = [
 ];
 
 export function Footer() {
-  // NEWSLETTER SUBMIT
-  // const handleNewsletterSubmit = (event: FormEvent) => {
-  //   event.preventDefault();
-  // const email:HTMLInputElement = document.getElementById('footer-newsletter-email')?.value;
-  // newsletter api...
-  // };
-
   return (
     <footer className='text-white font-light bg-dark-background mt-24 pt-24'>
-      {/* NEWSLETTER */}
-      <div className='max-container w-11/12 -mt-40 mb-8'>
-        <div
-          className='bg-light p-8 shadow-primary-shadow
-            cursor-default h-full flex gap-8 items-center
-            max-lg:flex-col
-          '
-        >
-          <div className='flex gap-4'>
-            <span className='material-symbols-rounded text-3xl text-primary-dark'>
-              mail
-            </span>
+      <FooterNewsletter />
 
-            <div className='max-lg:w-full'>
-              <h3 className='text-dark-gray2 text-lg font-bold'>Newsletter</h3>
-              <p className='info-text mt-1'>
-                Assine nossa newsletter e receba conteúdos exclusivos sobre
-                gestão educacional para impulsionar o sucesso da sua
-                instituição.
-              </p>
-            </div>
-          </div>
-
-          <form className='flex max-sm:flex-col h-1/2 w-4/5 max-lg:w-full'>
-            <input
-              name='newsletter-email'
-              type='email'
-              className='text-sm placeholder:text-dark-gray/80
-              border-light-gray/50 border-solid border-[1px] border-r-0
-              p-2 w-full max-sm:h-12'
-              placeholder='Digite seu email'
-              required
-            />
-
-            <PrimaryButton className='!rounded-none font-bold text-sm max-sm:w-full'>
-              Enviar
-            </PrimaryButton>
-          </form>
-        </div>
-      </div>
-
-      {/* FOOTER CONTENT */}
       <div className='max-container sm:p-8 md:p-14 flex flex-wrap max-sm:flex-col max-sm:gap-14 max-sm:items-center justify-between'>
         <div className='lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'>
           <Link href='/' className='flex items-center gap-2'>
