@@ -1,11 +1,11 @@
+import { simplifiedManagementData } from '@/constants';
+
 export function SimplifiedManagement() {
   return (
     <section className='max-container flex max-md:flex-col justify-between '>
       <div className='flex-1 my-auto'>
         <span className='subtitle-text'>Nosso Software</span>
-        <h2 className='title-text'>
-          Gestão Simplificada
-        </h2>
+        <h2 className='title-text'>Gestão Simplificada</h2>
 
         <p className='info-text pr-9 mt-7'>
           Nosso software de gestão educacional oferece um conjunto abrangente de
@@ -19,7 +19,9 @@ export function SimplifiedManagement() {
           <div className='text-3xl flex gap-4'>
             <span className='material-symbols-rounded text-4xl'>school</span>
             <div>
-              <span className='font-bold'>20+</span>
+              <span className='font-bold'>
+                {simplifiedManagementData.customers}+
+              </span>
               <p className='info-text'>Clientes</p>
             </div>
           </div>
@@ -27,7 +29,9 @@ export function SimplifiedManagement() {
           <div className='text-3xl flex gap-4'>
             <span className='material-symbols-rounded text-4xl'>groups</span>
             <div>
-              <span className='font-bold'>12+</span>
+              <span className='font-bold'>
+                {simplifiedManagementData.developers}+
+              </span>
               <p className='info-text'>Desenvolvedores</p>
             </div>
           </div>

@@ -6,7 +6,7 @@ export function Header() {
       <Navbar />
 
       <div className='max-container mt-14 sm:mt-28 md:mt-12 lg:mt-24 wide:ps-24 text-light w-3/4 flex flex-col gap-5'>
-        <h1 className='text-3xl md:text-[34px] leading-10 font-medium'>
+        <h1 className='text-3xl sm:text-4xl leading-10 font-bold'>
           Simplifique sua gestão
           <br />
           educacional com

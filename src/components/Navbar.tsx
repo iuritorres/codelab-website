@@ -1,7 +1,8 @@
+import { navbarLinks } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
-import logo from '../../public/images/logo-svg.svg';
+import logo from '../../public/images/logo.svg';
 
 interface NavbarItemProps {
   children: ReactNode;
@@ -42,13 +43,17 @@ export function Navbar() {
 
         <ul
           className='w-full text-dark-gray2 mt-4 pt-3 sm:mt-5 sm:pt-4 border-t-2 border-dark-gray lg:border-0
-        flex flex-wrap gap-y-2 sm:justify-between lg:justify-normal lg:gap-12 lg:m-0 lg:p-0 lg:w-auto
-        '
+            flex flex-wrap gap-y-2 sm:justify-between lg:justify-normal lg:gap-12 lg:m-0 lg:p-0 lg:w-auto
+          '
         >
-          <NavbarItem>Produtos</NavbarItem>
-          <NavbarItem className='text-right'>Clientes</NavbarItem>
-          <NavbarItem>Conteúdos</NavbarItem>
-          <NavbarItem className='text-right'>Bytecode</NavbarItem>
+          {navbarLinks.map((navbarLink, index) => (
+            <NavbarItem
+              key={`navbar-link-${navbarLink.label}`}
+              className={index % 2 !== 0 ? 'text-right' : ''}
+            >
+              {navbarLink.label}
+            </NavbarItem>
+          ))}
         </ul>
       </div>
     </div>

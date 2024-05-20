@@ -1,25 +1,8 @@
-import { PrimaryAnchor } from '@/components';
-import { FooterNewsletter } from '@/components/FooterNewsletter';
+import { FooterNewsletter, PrimaryAnchor } from '@/components';
+import { footerLinks, socialMedia } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../../public/images/logo-svg.svg';
-
-// FOOTER LINKS
-const otherPages = [
-  { title: 'Home', path: '/' },
-  { title: 'Sobre', path: '/' },
-  { title: 'Serviços', path: '/' },
-  { title: 'Produtos', path: '/' },
-  { title: 'Contato', path: '/' },
-];
-
-const quickLinks = [
-  { title: 'Isenção de Responsabilidade', path: '/' },
-  { title: 'Política de Privacidade', path: '/' },
-  { title: 'Termos de Uso', path: '/' },
-  { title: 'Créditos', path: '/' },
-  { title: 'FAQ', path: '/' },
-];
+import logo from '../../public/images/logo.svg';
 
 export function Footer() {
   return (
@@ -50,44 +33,45 @@ export function Footer() {
             <span className='material-symbols-rounded text-secondary'>
               call
             </span>
-            <span>+55 (81) 9 7345-8833</span>
+            <a
+              href={`tel:${socialMedia.phone}`}
+              className='hover:text-secondary'
+            >
+              {socialMedia.phone}
+            </a>
           </div>
 
           <div className='flex items-center gap-4'>
             <span className='material-symbols-rounded text-secondary'>
-              location_on
+              mail
             </span>
-            <span>Uninassau | Paulista</span>
+            <a
+              href={`mailto:${socialMedia.email}`}
+              className='hover:text-secondary'
+            >
+              {socialMedia.email}
+            </a>
           </div>
         </div>
 
-        <div className='flex flex-col lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'>
-          <h3 className='text-lg font-medium'>Outras Páginas</h3>
+        {footerLinks.map((footerLink) => (
+          <div
+            key={`footer-link-${footerLink.title}`}
+            className='flex flex-col lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'
+          >
+            <h3 className='text-lg font-medium'>{footerLink.title}</h3>
 
-          {otherPages.map((page) => (
-            <Link
-              key={`homeLink-${page.title}-${page.path}`}
-              href={page.path}
-              className='info-text mb-1 hover:text-secondary'
-            >
-              {page.title}
-            </Link>
-          ))}
-        </div>
-
-        <div className='flex flex-col lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'>
-          <h3 className='text-lg font-medium'>Links Extras</h3>
-
-          {quickLinks.map((page) => (
-            <Link
-              key={`homeLink-${page.title}-${page.path}`}
-              href={page.path}
-              className='info-text hover:text-secondary'
-            >
-              {page.title}
-            </Link>
-          ))}
-        </div>
+            {footerLink.links.map((link) => (
+              <Link
+                key={`footer-link-${footerLink.title}-${link.label}`}
+                href={link.link}
+                className='info-text mb-1 hover:text-secondary'
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        ))}
 
         <div className='lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'>
           <div className='flex items-center gap-3'>
@@ -107,7 +91,7 @@ export function Footer() {
         <hr className='info-text' />
         <div className='flex max-lg:flex-col max-lg:gap-4 items-center justify-between py-7'>
           <p>bytecode - coding the future</p>
-          <p>Copyright ® 2023 - All rights reserved</p>
+          <p>Copyright ® 2024 - Todos os direitos reservados</p>
         </div>
       </div>
     </footer>

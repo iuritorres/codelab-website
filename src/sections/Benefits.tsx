@@ -1,3 +1,5 @@
+import { benefits } from '@/constants';
+
 export function Benefits() {
   return (
     <section className='max-container py-5 grid grid-cols-2 max-lg:grid-cols-1'>
@@ -10,9 +12,7 @@ export function Benefits() {
 
       <div className='col-span-1'>
         <span className='subtitle-text'>Quem somos</span>
-        <h2 className='title-text'>
-          Nossos Benefícios
-        </h2>
+        <h2 className='title-text'>Nossos Benefícios</h2>
 
         <p className='info-text pr-9 mt-5 mb-10'>
           Somos uma equipe dedicada a transformar a gestão educacional por meio
@@ -23,22 +23,17 @@ export function Benefits() {
         </p>
 
         {/* PROGRESS BARS */}
-        {[
-          { title: 'Aumento de Produtividade', value: 40 },
-          { title: 'Redução de Retrabalhos', value: 70 },
-          { title: 'Melhoria na Comunicação', value: 50 },
-          { title: 'Otimização do Tempo', value: 30 },
-        ].map((item) => (
+        {benefits.map((benefit) => (
           <div
-            key={`home-benefits-${item.title}-${item.value}`}
+            key={`benefits-${benefit.title}-${benefit.value}`}
             className='mb-4'
           >
             <div className='flex justify-between'>
-              <span className='info-text'>{item.title}</span>
-              <span className='info-text'>{item.value}%</span>
+              <span className='info-text'>{benefit.title}</span>
+              <span className='info-text'>{benefit.value}%</span>
             </div>
 
-            <progress className='w-full' value={item.value} max={100} />
+            <progress className='w-full' value={benefit.value} max={100} />
           </div>
         ))}
       </div>
