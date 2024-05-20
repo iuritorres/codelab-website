@@ -9,8 +9,8 @@ export function Benefits() {
       </div>
 
       <div className='col-span-1'>
-        <span className='text-md text-primary-dark'>Quem somos</span>
-        <h2 className='text-2xl text-dark-gray2 font-medium'>
+        <span className='subtitle-text'>Quem somos</span>
+        <h2 className='title-text'>
           Nossos Benefícios
         </h2>
 
