@@ -4,7 +4,7 @@ interface PrimaryButtonProps {
   className?: string;
 }
 
-export default function PrimaryButton({
+export function PrimaryButton({
   children,
   onClick,
   className,
@@ -12,8 +12,8 @@ export default function PrimaryButton({
   return (
     <button
       onClick={onClick}
-      className={`px-6 py-4 w-fit text-center rounded-primary
-      text-light bg-primary hover:bg-primary-dark ${className}`}
+      className={`px-6 py-4 w-fit text-center text-lg text-light
+      rounded-primary bg-primary hover:bg-primary-dark ${className}`}
     >
       {children}
     </button>

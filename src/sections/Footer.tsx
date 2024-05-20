@@ -1,9 +1,7 @@
+import { PrimaryAnchor, PrimaryButton } from '@/components';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FormEvent } from 'react';
 import logo from '../../public/images/logo-svg.svg';
-import PrimaryButton from './PrimaryButton';
-import PrimaryAnchor from './PrimaryAnchor';
 
 // FOOTER LINKS
 const otherPages = [
@@ -22,7 +20,7 @@ const quickLinks = [
   { title: 'FAQ', path: '/' },
 ];
 
-export default function Footer() {
+export function Footer() {
   // NEWSLETTER SUBMIT
   // const handleNewsletterSubmit = (event: FormEvent) => {
   //   event.preventDefault();
@@ -31,21 +29,23 @@ export default function Footer() {
   // };
 
   return (
-    <footer className='text-white font-light relative bg-dark-background mt-24 pt-24'>
+    <footer className='text-white font-light bg-dark-background mt-24 pt-24'>
       {/* NEWSLETTER */}
-      <div className='mx-28 absolute top-0 start-50 -translate-y-1/2'>
+      <div className='max-container w-11/12 -mt-40 mb-8'>
         <div
-          className='bg-light px-7 py-8 shadow-primary-shadow
-          cursor-default h-full flex gap-4 items-center'
+          className='bg-light p-8 shadow-primary-shadow
+            cursor-default h-full flex gap-8 items-center
+            max-lg:flex-col
+          '
         >
           <div className='flex gap-4'>
             <span className='material-symbols-rounded text-3xl text-primary-dark'>
               mail
             </span>
 
-            <div className='w-3/4'>
+            <div className='max-lg:w-full'>
               <h3 className='text-dark-gray2 text-lg font-bold'>Newsletter</h3>
-              <p className='text-light-gray mt-1'>
+              <p className='info-text mt-1'>
                 Assine nossa newsletter e receba conteúdos exclusivos sobre
                 gestão educacional para impulsionar o sucesso da sua
                 instituição.
@@ -53,18 +53,18 @@ export default function Footer() {
             </div>
           </div>
 
-          <form className='flex h-1/2 w-1/2'>
+          <form className='flex max-sm:flex-col h-1/2 w-4/5 max-lg:w-full'>
             <input
               name='newsletter-email'
               type='email'
               className='text-sm placeholder:text-dark-gray/80
               border-light-gray/50 border-solid border-[1px] border-r-0
-              p-2 w-full'
+              p-2 w-full max-sm:h-12'
               placeholder='Digite seu email'
               required
             />
 
-            <PrimaryButton className='!rounded-none font-bold text-sm'>
+            <PrimaryButton className='!rounded-none font-bold text-sm max-sm:w-full'>
               Enviar
             </PrimaryButton>
           </form>
@@ -72,8 +72,8 @@ export default function Footer() {
       </div>
 
       {/* FOOTER CONTENT */}
-      <div className='mx-28 py-5 flex justify-between'>
-        <div className='w-1/4'>
+      <div className='max-container sm:p-8 md:p-14 flex flex-wrap max-sm:flex-col max-sm:gap-14 max-sm:items-center justify-between'>
+        <div className='lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'>
           <Link href='/' className='flex items-center gap-2'>
             <Image
               src={logo}
@@ -86,60 +86,62 @@ export default function Footer() {
             </h2>
           </Link>
 
-          <p className='py-5 text-[15px] text-light-gray'>
+          <p className='pt-5 pb-8 md:pr-12 info-text'>
             Nossa fábrica de software é focada nos resultados dos nossos
             clientes, entregando soluções eficientes e inovadoras para
             impulsionar seus negócios.
           </p>
 
           <div className='flex items-center gap-4 mb-3'>
-            <span className='material-symbols-rounded text-secondary'>call</span>
-            <span className='text-[15px]'>+55 (81) 9 7345-8833</span>
+            <span className='material-symbols-rounded text-secondary'>
+              call
+            </span>
+            <span>+55 (81) 9 7345-8833</span>
           </div>
 
           <div className='flex items-center gap-4'>
             <span className='material-symbols-rounded text-secondary'>
               location_on
             </span>
-            <span className='text-[15px]'>Uninassau | Paulista</span>
+            <span>Uninassau | Paulista</span>
           </div>
         </div>
 
-        <div className='flex flex-col'>
-          <h3 className='text-[17.5px] font-medium'>Outras Páginas</h3>
+        <div className='flex flex-col lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'>
+          <h3 className='text-lg font-medium'>Outras Páginas</h3>
 
           {otherPages.map((page) => (
             <Link
               key={`homeLink-${page.title}-${page.path}`}
               href={page.path}
-              className='text-[15px] text-light-gray mb-1'
+              className='info-text mb-1 hover:text-secondary'
             >
               {page.title}
             </Link>
           ))}
         </div>
 
-        <div className='flex flex-col'>
-          <h3 className='text-[17.5px] font-medium'>Links Extras</h3>
+        <div className='flex flex-col lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'>
+          <h3 className='text-lg font-medium'>Links Extras</h3>
 
           {quickLinks.map((page) => (
             <Link
               key={`homeLink-${page.title}-${page.path}`}
               href={page.path}
-              className='text-[15px] text-light-gray mb-1'
+              className='info-text hover:text-secondary'
             >
               {page.title}
             </Link>
           ))}
         </div>
 
-        <div className='w-1/4'>
+        <div className='lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'>
           <div className='flex items-center gap-3'>
             <span className='material-symbols-rounded'>timer</span>
             <span>8 AM - 8 PM, Segunda - Domingo</span>
           </div>
 
-          <p className='py-4 mb-4 text-[15px] text-light-gray'>
+          <p className='py-4 mb-4 info-text'>
             Nosso Suporte está disponível 24/7 para responder suas dúvidas.
           </p>
 
@@ -147,9 +149,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className='mx-28 mt-4'>
-        <hr className='border-light-gray/70' />
-        <div className='text-[15px] flex items-center justify-between py-7'>
+      <div className='max-container sm:px-8 md:px-14 max-lg:mt-14'>
+        <hr className='info-text' />
+        <div className='flex max-lg:flex-col max-lg:gap-4 items-center justify-between py-7'>
           <p>bytecode - coding the future</p>
           <p>Copyright ® 2023 - All rights reserved</p>
         </div>

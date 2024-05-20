@@ -4,7 +4,7 @@ interface HorizontalCardProps {
   content: string;
 }
 
-export default function HorizontalCard({
+export function HorizontalCard({
   icon,
   title,
   content,
@@ -12,16 +12,16 @@ export default function HorizontalCard({
   return (
     <div
       className='
-      bg-white hover:bg-[#ecedee] px-7 py-3 rounded-primary
-      shadow-primary-shadow cursor-default h-full flex gap-4'
+      bg-white hover:bg-[#ecedee] p-8 rounded-primary
+      shadow-primary-shadow cursor-default h-full flex gap-4 min-w-64'
     >
       <span className='material-symbols-rounded text-primary-dark text-3xl'>
         {icon}
       </span>
 
       <div>
-        <h3 className='text-[17.5px] text-dark-gray2 font-bold'>{title}</h3>
-        <p className='text-[15px] text-light-gray mt-1'>{content}</p>
+        <h3 className='title-text !text-xl !font-bold'>{title}</h3>
+        <p className='info-text mt-1'>{content}</p>
       </div>
     </div>
   );

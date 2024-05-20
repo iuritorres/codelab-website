@@ -5,17 +5,12 @@ interface CardProps {
   className?: string;
 }
 
-export default function Card({
-  icon,
-  title,
-  description,
-  className,
-}: CardProps) {
+export function Card({ icon, title, description, className }: CardProps) {
   return (
     <div
       className={`
-      bg-light2 hover:bg-[#d9dbdc] p-8 rounded-primary border-b-8
-      border-primary border-solid shadow-primary-shadow cursor-default
+      bg-light2 hover:bg-[#d9dbdc] p-8 rounded-primary border-b-8 min-w-64
+      border-primary border-solid shadow-primary-shadow cursor-default flex-1
       ${className}
       `}
     >
@@ -23,10 +18,8 @@ export default function Card({
         {icon}
       </span>
 
-      <h3 className='text-[17.5px] leading-5 text-dark-gray2 font-bold mb-2'>
-        {title}
-      </h3>
-      <p className='text-light-gray text-[15px]'>{description}</p>
+      <h3 className='title-text !text-xl !font-bold mb-4'>{title}</h3>
+      <p className='info-text'>{description}</p>
     </div>
   );
 }
