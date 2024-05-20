@@ -4,6 +4,7 @@ import { HorizontalCard } from './HorizontalCard';
 import { Navbar } from './Navbar';
 import { PrimaryAnchor } from './PrimaryAnchor';
 import { PrimaryButton } from './PrimaryButton';
+import { VLibrasWidget } from './VLibrasWidget';
 
 export {
   Card,
@@ -12,4 +13,5 @@ export {
   Navbar,
   PrimaryAnchor,
   PrimaryButton,
+  VLibrasWidget,
 };

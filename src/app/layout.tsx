@@ -1,3 +1,4 @@
+import { VLibrasWidget } from '@/components';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
@@ -82,7 +83,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR'>
-      <body className={`${ubuntu.className}`}>{children}</body>
+      <body className={`${ubuntu.className}`}>
+        {children}
+        <VLibrasWidget />
+      </body>
     </html>
   );
 }
