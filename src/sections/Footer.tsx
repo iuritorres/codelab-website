@@ -39,7 +39,7 @@ export function Footer() {
             <Image src={call} alt='call' width={28} height={28} />
             <a
               href={`tel:${socialMedia.phone}`}
-              className='hover:text-secondary'
+              className='hover:text-secondary transition-colors'
             >
               {socialMedia.phone}
             </a>
@@ -49,7 +49,7 @@ export function Footer() {
             <Image src={mail} alt='mail' width={28} height={28} />
             <a
               href={`mailto:${socialMedia.email}`}
-              className='hover:text-secondary'
+              className='hover:text-secondary transition-colors'
             >
               {socialMedia.email}
             </a>
@@ -67,7 +67,7 @@ export function Footer() {
               <Link
                 key={`footer-link-${footerLink.title}-${link.label}`}
                 href={link.link}
-                className='info-text !text-lg !text-light/70 mb-3 hover:!text-secondary'
+                className='info-text !text-lg !text-light/70 mb-3 hover:!text-secondary transition-colors'
               >
                 {link.label}
               </Link>

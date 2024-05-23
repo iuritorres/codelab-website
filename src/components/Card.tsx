@@ -13,6 +13,7 @@ export function Card({ icon, title, description, className }: CardProps) {
       className={`
       bg-light2 hover:brightness-95 p-8 rounded-primary border-b-8 min-w-64
       border-primary border-solid shadow-primary-shadow cursor-default flex-1
+      transition-colors
       ${className}
       `}
     >

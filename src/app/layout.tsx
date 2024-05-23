@@ -44,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR'>
-      <body className={`${montserrat.className}`}>
+      <body className={`${montserrat.className} scroll-smooth select-none`}>
         {children}
         <VLibrasWidget />
       </body>

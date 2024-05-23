@@ -45,7 +45,7 @@ export function SimplifiedManagement() {
       </div>
 
       <div className='flex-1'>
-        <div className='relative hover:brightness-75 cursor-pointer'>
+        <div className='relative hover:brightness-75 transition-all cursor-pointer'>
           <Image
             src={teacherWithHerStudents}
             alt='teacher with her students'

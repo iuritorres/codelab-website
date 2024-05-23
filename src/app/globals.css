@@ -7,9 +7,6 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
-  transition: all 100ms ease-in-out;
-  user-select: none;
   text-decoration: none !important;
 }
 

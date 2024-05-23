@@ -10,7 +10,7 @@ export function HorizontalCard({ icon, title, content }: HorizontalCardProps) {
   return (
     <div
       className='
-      bg-white hover:bg-[#ecedee] p-8 rounded-primary
+      bg-white hover:bg-[#ecedee] p-8 rounded-primary transition-colors
       shadow-primary-shadow cursor-default h-full flex items-start gap-4 min-w-64'
     >
       <Image

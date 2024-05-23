@@ -11,7 +11,7 @@ export const PrimaryAnchor: React.FC<PrimaryAnchorProps> = ({
       {...rest}
       target='_blank'
       className={`px-6 py-4 w-fit text-center text-base font-medium text-white
-      rounded-primary bg-primary hover:bg-primary-dark ${className}`}
+      rounded-primary bg-primary hover:bg-primary-dark transition-colors ${className}`}
     >
       {children}
     </a>

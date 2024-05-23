@@ -16,7 +16,7 @@ function NavbarItem({ children, className }: NavbarItemProps) {
         font-semibold sm:pe-3 cursor-pointer after:cursor-pointer hover:text-primary relative
         after:content-[''] sm:after:block after:hidden after:w-2 after:h-2 after:absolute
         after:border-t-[1px] after:border-l-[1px] after:border-solid after:border-dark-gray
-        after:-right-2 after:top-[5px] after:-rotate-[135deg] sm:text-center
+        after:-right-2 after:top-[5px] after:-rotate-[135deg] sm:text-center transition-colors
         hover:after:border-primary basis-1/2 sm:basis-0 ${className}
       `}
     >
