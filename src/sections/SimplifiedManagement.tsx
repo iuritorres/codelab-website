@@ -47,6 +47,7 @@ export function SimplifiedManagement() {
             src={teacherWithHerStudents}
             alt='teacher with her students'
             className='media max-md:h-[300px] h-[380px] object-cover'
+            placeholder='blur'
           />
           <span
             className='material-symbols-rounded text-8xl text-primary-dark
