@@ -2,6 +2,10 @@ import { FooterNewsletter, PrimaryAnchor } from '@/components';
 import { footerLinks, socialMedia } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import call from '../../public/icons/call_secondary.svg';
+import mail from '../../public/icons/mail_secondary.svg';
+import timer from '../../public/icons/timer_secondary.svg';
 import logo from '../../public/images/logo.svg';
 
 export function Footer() {
@@ -32,9 +36,7 @@ export function Footer() {
           </p>
 
           <div className='flex items-center gap-4 mb-3'>
-            <span className='material-symbols-rounded text-secondary'>
-              call
-            </span>
+            <Image src={call} alt='call' width={28} height={28} />
             <a
               href={`tel:${socialMedia.phone}`}
               className='hover:text-secondary'
@@ -44,9 +46,7 @@ export function Footer() {
           </div>
 
           <div className='flex items-center gap-4 sm:mb-8 lg:mb-0'>
-            <span className='material-symbols-rounded text-secondary'>
-              mail
-            </span>
+            <Image src={mail} alt='mail' width={28} height={28} />
             <a
               href={`mailto:${socialMedia.email}`}
               className='hover:text-secondary'
@@ -77,7 +77,7 @@ export function Footer() {
 
         <div className='lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'>
           <div className='flex items-center gap-3'>
-            <span className='material-symbols-rounded'>timer</span>
+            <Image src={timer} alt='timer' width={28} height={28} />
             <span>8 AM - 8 PM, Segunda - Domingo</span>
           </div>
 

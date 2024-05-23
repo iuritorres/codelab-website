@@ -3,6 +3,9 @@
 import { FormEvent, useRef } from 'react';
 import { PrimaryButton } from './PrimaryButton';
 
+import Image from 'next/image';
+import mail from '../../public/icons/mail.svg';
+
 export function FooterNewsletter() {
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -24,10 +27,8 @@ export function FooterNewsletter() {
           max-lg:flex-col
         '
       >
-        <div className='flex gap-4'>
-          <span className='material-symbols-rounded text-3xl text-primary-dark'>
-            mail
-          </span>
+        <div className='flex gap-4 items-start'>
+          <Image src={mail} alt='mail' width={28} height={28} />
 
           <div className='max-lg:w-full'>
             <h3 className='text-dark-gray2 text-lg font-bold'>Newsletter</h3>

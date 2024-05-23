@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export interface CardProps {
   icon: string;
   title: string;
@@ -14,11 +16,9 @@ export function Card({ icon, title, description, className }: CardProps) {
       ${className}
       `}
     >
-      <span className='material-symbols-rounded text-primary text-[44px] mb-6'>
-        {icon}
-      </span>
+      <Image src={icon} alt={title} width={44} height={44} className='mb-2' />
 
-      <h1 className='title-text !text-xl !font-bold mb-4'>{title}</h1>
+      <h1 className='title-text !text-xl !font-bold mb-5'>{title}</h1>
       <p className='info-text !text-base'>{description}</p>
     </div>
   );

@@ -13,7 +13,7 @@ function NavbarItem({ children, className }: NavbarItemProps) {
   return (
     <li
       className={`
-        font-medium sm:pe-3 cursor-pointer after:cursor-pointer hover:text-primary relative
+        font-semibold sm:pe-3 cursor-pointer after:cursor-pointer hover:text-primary relative
         after:content-[''] sm:after:block after:hidden after:w-2 after:h-2 after:absolute
         after:border-t-[1px] after:border-l-[1px] after:border-solid after:border-dark-gray
         after:-right-2 after:top-[5px] after:-rotate-[135deg] sm:text-center

@@ -1,5 +1,15 @@
 import { CardProps } from '@/components/Card';
 
+import { HorizontalCardProps } from '@/components/HorizontalCard';
+import account_tree from '../../public/icons/account_tree.svg';
+import calendarMonth from '../../public/icons/calendar_month.svg';
+import checklist from '../../public/icons/checklist.svg';
+import forum from '../../public/icons/forum.svg';
+import menuBook from '../../public/icons/menu_book.svg';
+import rebase from '../../public/icons/rebase.svg';
+import support_agent from '../../public/icons/support_agent.svg';
+import thumbsUpDown from '../../public/icons/thumbs_up_down.svg';
+
 interface linkInterface {
   label: string;
   link: string;
@@ -67,27 +77,54 @@ export const simplifiedManagementData = {
 
 export const infoCardsData: CardProps[] = [
   {
-    icon: 'forum',
+    icon: forum,
     title: 'Comunicação Eficiente',
     description:
       'Nosso software de gestão educacional oferece recursos avançados de comunicação que facilitam a comunicação entre escola, pais e alunos, permitindo a troca de informações importantes.',
   },
   {
-    icon: 'account_tree',
+    icon: account_tree,
     title: 'Integração Simplificada',
     description:
       'Nosso software de gestão educacional permite a integração simplificada com outros sistemas utilizados pela sua instituição.',
   },
   {
-    icon: 'rebase',
+    icon: rebase,
     title: 'Automação de Processos',
     description:
       'Reduza a carga de trabalho administrativo e aumente a eficiência com a automação de processos.',
   },
   {
-    icon: 'support_agent',
+    icon: support_agent,
     title: 'Suporte Ativo',
     description:
       'Oferecemos suporte técnico dedicado, com uma equipe especializada disponível para responder às suas perguntas e resolver quaisquer problemas.',
+  },
+];
+
+export const ourProductsCardsData: HorizontalCardProps[] = [
+  {
+    icon: calendarMonth,
+    title: 'Frequência',
+    content:
+      'Solução abrangente para acompanhar, monitorar e otimizar a frequência dos alunos nas instituições de ensino.',
+  },
+  {
+    icon: menuBook,
+    title: 'Biblioteca Online',
+    content:
+      'Biblioteca online para estudantes: acesso fácil a recursos educacionais, promovendo aprendizado autônomo e acesso conveniente a conteúdos relevantes.',
+  },
+  {
+    icon: checklist,
+    title: 'Lançamento de Notas',
+    content:
+      'Nossa solução simplifica o trabalho dos professores e fornece um feedback claro aos alunos sobre seu desempenho acadêmico.',
+  },
+  {
+    icon: thumbsUpDown,
+    title: 'Moods (Feedbacks)',
+    content:
+      'Sistema de feedback interativo: fortaleça a comunicação entre alunos e professores, promovendo um ambiente colaborativo e melhorando a qualidade da aprendizagem.',
   },
 ];

@@ -1,5 +1,12 @@
 import { HorizontalCard, PrimaryAnchor } from '@/components';
 
+import { ourProductsCardsData } from '@/constants';
+
+const columns = [
+  ourProductsCardsData.slice(0, 2),
+  ourProductsCardsData.slice(2, 4),
+];
+
 export function OurProducts() {
   return (
     <section className='max-container flex max-lg:flex-col justify-between items-center'>
@@ -17,39 +24,22 @@ export function OurProducts() {
       </div>
 
       <div className='grid max-md:grid-cols-1 grid-cols-2 gap-3 max-lg:mt-14'>
-        <div className='grid grid-rows-2 gap-3'>
-          <div className='w-full h-full'>
-            <HorizontalCard
-              icon='calendar_month'
-              title='Frequência'
-              content='Solução abrangente para acompanhar, monitorar e otimizar a frequência dos alunos nas instituições de ensino.'
-            />
+        {columns.map((column, index) => (
+          <div
+            key={`our-products-column-${index}`}
+            className='grid grid-rows-2 gap-3'
+          >
+            {column.map((card) => (
+              <div key={`column1-card-${card.title}`} className='w-full h-full'>
+                <HorizontalCard
+                  icon={card.icon}
+                  title={card.title}
+                  content={card.content}
+                />
+              </div>
+            ))}
           </div>
-          <div className='w-full h-full'>
-            <HorizontalCard
-              icon='menu_book'
-              title='Biblioteca Online'
-              content='Biblioteca online para estudantes: acesso fácil a recursos educacionais, promovendo aprendizado autônomo e acesso conveniente a conteúdos relevantes.'
-            />
-          </div>
-        </div>
-
-        <div className='grid grid-rows-2 gap-3'>
-          <div className='w-full h-full'>
-            <HorizontalCard
-              icon='checklist'
-              title='Lançamento de Notas'
-              content='Nossa solução simplifica o trabalho dos professores e fornece um feedback claro aos alunos sobre seu desempenho acadêmico.'
-            />
-          </div>
-          <div className='w-full h-full'>
-            <HorizontalCard
-              icon='thumbs_up_down'
-              title='Moods (Feedbacks)'
-              content='Sistema de feedback interativo: fortaleça a comunicação entre alunos e professores, promovendo um ambiente colaborativo e melhorando a qualidade da aprendizagem.'
-            />
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

@@ -1,6 +1,9 @@
 import { simplifiedManagementData } from '@/constants';
 import Image from 'next/image';
 
+import groups from '../../public/icons/groups.svg';
+import playCircle from '../../public/icons/play_circle.svg';
+import school from '../../public/icons/school.svg';
 import teacherWithHerStudents from '../../public/images/teacher-with-her-students.webp';
 
 export function SimplifiedManagement() {
@@ -20,7 +23,7 @@ export function SimplifiedManagement() {
 
         <div className='flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-10 my-8 text-primary-dark'>
           <div className='text-3xl flex gap-4'>
-            <span className='material-symbols-rounded text-4xl'>school</span>
+            <Image src={school} alt='school' width={44} height={44} />
             <div>
               <span className='font-bold'>
                 {simplifiedManagementData.customers}+
@@ -30,7 +33,7 @@ export function SimplifiedManagement() {
           </div>
 
           <div className='text-3xl flex gap-4'>
-            <span className='material-symbols-rounded text-4xl'>groups</span>
+            <Image src={groups} alt='groups' width={44} height={44} />
             <div>
               <span className='font-bold'>
                 {simplifiedManagementData.developers}+
@@ -51,12 +54,19 @@ export function SimplifiedManagement() {
             width={615}
             height={380}
           />
-          <span
+          {/* <span
             className='material-symbols-rounded text-8xl text-primary-dark
             absolute left-1/2 -translate-x-[50%] top-1/2 -translate-y-[50%]'
           >
             play_circle
-          </span>
+          </span> */}
+          <Image
+            src={playCircle}
+            alt='play circle'
+            width={96}
+            height={96}
+            className='absolute left-1/2 -translate-x-[50%] top-1/2 -translate-y-[50%]'
+          />
         </div>
       </div>
     </section>

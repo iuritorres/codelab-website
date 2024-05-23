@@ -1,23 +1,25 @@
-interface HorizontalCardProps {
+import Image from 'next/image';
+
+export interface HorizontalCardProps {
   icon: string;
   title: string;
   content: string;
 }
 
-export function HorizontalCard({
-  icon,
-  title,
-  content,
-}: HorizontalCardProps) {
+export function HorizontalCard({ icon, title, content }: HorizontalCardProps) {
   return (
     <div
       className='
       bg-white hover:bg-[#ecedee] p-8 rounded-primary
-      shadow-primary-shadow cursor-default h-full flex gap-4 min-w-64'
+      shadow-primary-shadow cursor-default h-full flex items-start gap-4 min-w-64'
     >
-      <span className='material-symbols-rounded text-primary-dark text-3xl leading-none'>
-        {icon}
-      </span>
+      <Image
+        src={icon}
+        alt={title}
+        width={44}
+        height={44}
+        className='h-8 flex-1'
+      />
 
       <div>
         <h3 className='title-text !text-xl !font-bold'>{title}</h3>
