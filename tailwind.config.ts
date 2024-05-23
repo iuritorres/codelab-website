@@ -21,7 +21,7 @@ const config: Config = {
       'dark-gray': '#333333',
       'dark-gray2': '#212529',
       'dark-background': '#1D2226',
-      'light-gray': '#6c757d',
+      'light-gray': '#5e666d',
       primary: '#610bd9',
       'primary-dark': '#5617ae',
       secondary: '#d629d9',
@@ -41,7 +41,7 @@ const config: Config = {
         primary: '4px',
       },
       fontFamily: {
-        ubuntu: ['var(--font-ubuntu)'],
+        ubuntu: ['var(--font-montserrat)'],
       },
       screens: {
         wide: '1440px',

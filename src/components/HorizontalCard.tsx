@@ -15,13 +15,13 @@ export function HorizontalCard({
       bg-white hover:bg-[#ecedee] p-8 rounded-primary
       shadow-primary-shadow cursor-default h-full flex gap-4 min-w-64'
     >
-      <span className='material-symbols-rounded text-primary-dark text-3xl'>
+      <span className='material-symbols-rounded text-primary-dark text-3xl leading-none'>
         {icon}
       </span>
 
       <div>
         <h3 className='title-text !text-xl !font-bold'>{title}</h3>
-        <p className='info-text mt-1'>{content}</p>
+        <p className='info-text !text-base mt-1'>{content}</p>
       </div>
     </div>
   );

@@ -16,14 +16,16 @@ export function Footer() {
               src={logo}
               className='w-10 h-10 -m-1'
               alt='bytecode - coding the future logo'
+              width={40}
+              height={40}
             />
 
-            <h2 className='text-[25px] font-medium'>
+            <h2 className='text-[25px] font-semibold'>
               byte<span className='text-secondary'>code</span>
             </h2>
           </Link>
 
-          <p className='pt-5 pb-8 md:pr-12 info-text'>
+          <p className='pt-5 pb-8 md:pr-12 info-text !text-light/70'>
             Nossa fábrica de software é focada nos resultados dos nossos
             clientes, entregando soluções eficientes e inovadoras para
             impulsionar seus negócios.
@@ -41,7 +43,7 @@ export function Footer() {
             </a>
           </div>
 
-          <div className='flex items-center gap-4'>
+          <div className='flex items-center gap-4 sm:mb-8 lg:mb-0'>
             <span className='material-symbols-rounded text-secondary'>
               mail
             </span>
@@ -59,13 +61,13 @@ export function Footer() {
             key={`footer-link-${footerLink.title}`}
             className='flex flex-col lg:w-1/4 max-lg:w-1/2 max-sm:w-full max-sm:px-8'
           >
-            <h3 className='text-lg font-medium'>{footerLink.title}</h3>
+            <h3 className='text-lg font-semibold mb-2'>{footerLink.title}</h3>
 
             {footerLink.links.map((link) => (
               <Link
                 key={`footer-link-${footerLink.title}-${link.label}`}
                 href={link.link}
-                className='info-text mb-1 hover:text-secondary'
+                className='info-text !text-light/70 mb-1 hover:!text-secondary'
               >
                 {link.label}
               </Link>
@@ -79,7 +81,7 @@ export function Footer() {
             <span>8 AM - 8 PM, Segunda - Domingo</span>
           </div>
 
-          <p className='py-4 mb-4 info-text'>
+          <p className='py-4 mb-4 info-text !text-light/70'>
             Nosso Suporte está disponível 24/7 para responder suas dúvidas.
           </p>
 
@@ -88,7 +90,7 @@ export function Footer() {
       </div>
 
       <div className='max-container sm:px-8 md:px-14 max-lg:mt-14'>
-        <hr className='info-text' />
+        <hr className='info-text !text-light/70' />
         <div className='flex max-lg:flex-col max-lg:gap-4 items-center justify-between py-7'>
           <p>bytecode - coding the future</p>
           <p>Copyright ® 2024 - Todos os direitos reservados</p>

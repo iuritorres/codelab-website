@@ -32,11 +32,13 @@ export function Navbar() {
         <Link href='/' className='flex items-center gap-1 sm:gap-2 md:gap-1'>
           <Image
             src={logo}
+            width={40}
+            height={40}
             className='h-9 w-9 sm:h-[40px] sm:w-[40px] lg:h-[50px] lg:w-[50px]'
             alt='bytecode - coding the future logo'
           />
 
-          <h2 className='text-dark-gray text-[20px] sm:text-[23.35px] md:text-[25px]  pb-1 font-medium'>
+          <h2 className='text-dark-gray text-[20px] sm:text-[23.35px] md:text-[25px]  pb-1 font-semibold'>
             byte<span className='text-secondary'>code</span>
           </h2>
         </Link>

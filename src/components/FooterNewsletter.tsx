@@ -31,7 +31,7 @@ export function FooterNewsletter() {
 
           <div className='max-lg:w-full'>
             <h3 className='text-dark-gray2 text-lg font-bold'>Newsletter</h3>
-            <p className='info-text mt-1'>
+            <p className='info-text !font-medium mt-1'>
               Assine nossa newsletter e receba conteúdos exclusivos sobre gestão
               educacional para impulsionar o sucesso da sua instituição.
             </p>

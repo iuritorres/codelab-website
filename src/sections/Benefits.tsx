@@ -10,14 +10,14 @@ export function Benefits() {
         <Image
           src={universityStudents}
           alt='university students throwing their caps up'
-          className='media lg:w-5/6 max-lg:mb-12 max-md:h-[300px] h-[500px] object-cover'
+          className='media lg:w-5/6 max-md:h-[300px] w-full h-full object-cover'
           placeholder='blur'
-          width={600}
+          width={500}
           height={500}
         />
       </div>
 
-      <div className='col-span-1'>
+      <div className='col-span-1 max-lg:mt-12'>
         <span className='subtitle-text'>Quem somos</span>
         <h2 className='title-text'>Nossos Benefícios</h2>
 

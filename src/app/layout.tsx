@@ -1,52 +1,11 @@
 import { VLibrasWidget } from '@/components';
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 
-const ubuntu = localFont({
-  src: [
-    {
-      path: './fonts/ubuntu/Ubuntu-Light.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: './fonts/ubuntu/Ubuntu-LightItalic.ttf',
-      weight: '300',
-      style: 'italic',
-    },
-    {
-      path: './fonts/ubuntu/Ubuntu-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './fonts/ubuntu/Ubuntu-Italic.ttf',
-      weight: '400',
-      style: 'italic',
-    },
-    {
-      path: './fonts/ubuntu/Ubuntu-Medium.ttf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './fonts/ubuntu/Ubuntu-MediumItalic.ttf',
-      weight: '500',
-      style: 'italic',
-    },
-    {
-      path: './fonts/ubuntu/Ubuntu-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: './fonts/ubuntu/Ubuntu-BoldItalic.ttf',
-      weight: '700',
-      style: 'italic',
-    },
-  ],
-  variable: '--font-ubuntu',
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
   display: 'swap',
   preload: true,
 });
@@ -85,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR'>
-      <body className={`${ubuntu.className}`}>
+      <body className={`${montserrat.className}`}>
         {children}
         <VLibrasWidget />
       </body>

@@ -64,18 +64,12 @@
   }
 
   .title-text {
-    @apply text-2xl text-dark-gray2 font-medium;
+    @apply text-2xl text-dark-gray2 font-bold;
   }
 
   .subtitle-text {
-    @apply text-lg text-primary-dark;
+    @apply text-lg text-primary-dark font-medium;
   }
-}
-
-/* VLibras */
-.access-button {
-  width: 70px !important;
-  height: 70px !important;
 }
 
 /* scroll bar */
