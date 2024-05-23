@@ -36,11 +36,9 @@ const config: Config = {
       boxShadow: {
         'primary-shadow':
           '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-        media: '15px 15px 0 #5617ae',
       },
       borderRadius: {
         primary: '4px',
-        media: '24px 0 24px 0',
       },
       fontFamily: {
         ubuntu: ['var(--font-ubuntu)'],

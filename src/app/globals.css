@@ -24,6 +24,10 @@
     max-width: 1440px;
     margin: 0 auto;
   }
+
+  .media {
+    @apply rounded-tl-3xl rounded-br-3xl shadow-[15px_15px_0] shadow-primary-dark;
+  }
 }
 
 @layer utilities {

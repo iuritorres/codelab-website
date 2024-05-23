@@ -1,13 +1,17 @@
 import { benefits } from '@/constants';
+import Image from 'next/image';
+
+import universityStudents from '../../public/images/university-students-throwing-their-caps-up.jpg';
 
 export function Benefits() {
   return (
     <section className='max-container py-5 grid grid-cols-2 max-lg:grid-cols-1'>
       <div className='col-span-1'>
-        <a
-          href='#'
-          className='shadow-media rounded-media bg-homePageImage bg-center bg-cover w-full lg:w-5/6 max-lg:mb-12 max-md:h-[300px] h-[500px] flex'
-        ></a>
+        <Image
+          src={universityStudents}
+          alt='university students throwing their caps up'
+          className='media lg:w-5/6 max-lg:mb-12 max-md:h-[300px] h-[500px] object-cover'
+        />
       </div>
 
       <div className='col-span-1'>
