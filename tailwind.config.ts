@@ -28,7 +28,7 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        header: "url('/images/teacher-and-little-girl-banner.jpg')",
+        header: "url('/images/teacher-and-little-girl-banner.webp')",
         homePageVideo: "url('/images/teacher-with-her-students.jpg')",
         homePageImage:
           "url('/images/university-students-throwing-their-caps-up.jpg')",

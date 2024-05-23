@@ -47,6 +47,8 @@ const ubuntu = localFont({
     },
   ],
   variable: '--font-ubuntu',
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {

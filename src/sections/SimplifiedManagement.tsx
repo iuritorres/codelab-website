@@ -48,6 +48,8 @@ export function SimplifiedManagement() {
             alt='teacher with her students'
             className='media max-md:h-[300px] h-[380px] object-cover'
             placeholder='blur'
+            width={615}
+            height={380}
           />
           <span
             className='material-symbols-rounded text-8xl text-primary-dark

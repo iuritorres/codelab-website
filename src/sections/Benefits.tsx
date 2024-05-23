@@ -12,6 +12,8 @@ export function Benefits() {
           alt='university students throwing their caps up'
           className='media lg:w-5/6 max-lg:mb-12 max-md:h-[300px] h-[500px] object-cover'
           placeholder='blur'
+          width={600}
+          height={500}
         />
       </div>
 

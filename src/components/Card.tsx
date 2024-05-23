@@ -18,7 +18,7 @@ export function Card({ icon, title, description, className }: CardProps) {
         {icon}
       </span>
 
-      <h3 className='title-text !text-xl !font-bold mb-4'>{title}</h3>
+      <h1 className='title-text !text-xl !font-bold mb-4'>{title}</h1>
       <p className='info-text'>{description}</p>
     </div>
   );
