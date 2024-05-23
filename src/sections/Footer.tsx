@@ -25,7 +25,7 @@ export function Footer() {
             </h2>
           </Link>
 
-          <p className='pt-5 pb-8 md:pr-12 info-text !text-light/70'>
+          <p className='pt-5 pb-8 md:pr-12 info-text !text-lg !leading-6 !text-light/70'>
             Nossa fábrica de software é focada nos resultados dos nossos
             clientes, entregando soluções eficientes e inovadoras para
             impulsionar seus negócios.
@@ -67,7 +67,7 @@ export function Footer() {
               <Link
                 key={`footer-link-${footerLink.title}-${link.label}`}
                 href={link.link}
-                className='info-text !text-light/70 mb-1 hover:!text-secondary'
+                className='info-text !text-lg !text-light/70 mb-3 hover:!text-secondary'
               >
                 {link.label}
               </Link>
@@ -81,7 +81,7 @@ export function Footer() {
             <span>8 AM - 8 PM, Segunda - Domingo</span>
           </div>
 
-          <p className='py-4 mb-4 info-text !text-light/70'>
+          <p className='py-4 mb-4 info-text !text-lg !leading-6 !text-light/70'>
             Nosso Suporte está disponível 24/7 para responder suas dúvidas.
           </p>
 

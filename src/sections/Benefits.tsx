@@ -1,7 +1,7 @@
 import { benefits } from '@/constants';
 import Image from 'next/image';
 
-import universityStudents from '../../public/images/university-students-throwing-their-caps-up.jpg';
+import universityStudents from '../../public/images/university-students-throwing-their-caps-up.webp';
 
 export function Benefits() {
   return (

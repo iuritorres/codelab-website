@@ -9,7 +9,7 @@ export function InfoCards() {
         <Card
           {...cardProps}
           key={`card-${cardProps.title}`}
-          className='w-full lg:w-[48%] xl:w-[23%]'
+          className='w-full lg:w-[48%] xl:w-[23%] z-10'
         />
       ))}
     </section>

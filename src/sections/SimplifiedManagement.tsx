@@ -1,7 +1,7 @@
 import { simplifiedManagementData } from '@/constants';
 import Image from 'next/image';
 
-import teacherWithHerStudents from '../../public/images/teacher-with-her-students.jpg';
+import teacherWithHerStudents from '../../public/images/teacher-with-her-students.webp';
 
 export function SimplifiedManagement() {
   return (
