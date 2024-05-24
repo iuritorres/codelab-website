@@ -1,4 +1,5 @@
 import { JivoChatWidget, VLibrasWidget } from '@/components';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
@@ -49,6 +50,7 @@ export default function RootLayout({
 
         <VLibrasWidget />
         <JivoChatWidget />
+        <GoogleAnalytics gaId='G-PLX90JBNW5' />
       </body>
     </html>
   );
