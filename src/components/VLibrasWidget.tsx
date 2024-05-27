@@ -30,7 +30,7 @@ export function VLibrasWidget() {
 
       <Script
         async
-        onLoad={createVLibrasWindow}
+        onReady={createVLibrasWindow}
         src='https://vlibras.gov.br/app/vlibras-plugin.js'
       />
     </>
