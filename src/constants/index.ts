@@ -12,10 +12,6 @@ import thumbsUpDown from '../../public/icons/thumbs_up_down.svg';
 
 export const googleTagManagerId = 'GTM-M7XS2LVM';
 
-export const adOptWidgetMetadata = {
-  'adopt-website-id': 'aceffea2-7314-4962-9f9b-c572858279fe',
-};
-
 interface linkInterface {
   label: string;
   link: string;

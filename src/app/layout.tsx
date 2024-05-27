@@ -1,5 +1,6 @@
 import { JivoChatWidget, VLibrasWidget } from '@/components';
-import { adOptWidgetMetadata, googleTagManagerId } from '@/constants';
+import { AdOptWidget, adOptWidgetMetadata } from '@/components/AdOptWidget';
+import { googleTagManagerId } from '@/constants';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
@@ -39,8 +40,7 @@ export const metadata: Metadata = {
 
   Espero que essas dicas sejam úteis para o sucesso contínuo do seu negócio online! 🌟✨`,
 
-  // AdOptWidget
-  other: adOptWidgetMetadata,
+  other: adOptWidgetMetadata, // AdOptWidget
 };
 
 export default function RootLayout({
@@ -58,6 +58,7 @@ export default function RootLayout({
         {/* Global Scripts */}
         <VLibrasWidget />
         <JivoChatWidget />
+        <AdOptWidget />
         <GoogleTagManager gtmId={googleTagManagerId} />
       </body>
     </html>
