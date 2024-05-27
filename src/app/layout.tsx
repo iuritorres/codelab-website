@@ -1,6 +1,6 @@
 import { AdOptWidget, JivoChatWidget, VLibrasWidget } from '@/components';
 import { adOptWidgetMetadata } from '@/components/AdOptWidget';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
@@ -55,10 +55,12 @@ export default function RootLayout({
       >
         {children}
 
+        {/* Global Scripts */}
         <VLibrasWidget />
         <JivoChatWidget />
-        <AdOptWidget />
-        <GoogleAnalytics gaId='G-PLX90JBNW5' />
+        {/* <AdOptWidget /> */}
+        {/* <GoogleAnalytics gaId='G-PLX90JBNW5' /> */}
+        <GoogleTagManager gtmId='GTM-M7XS2LVM' />
       </body>
     </html>
   );
