@@ -1,4 +1,5 @@
-import { JivoChatWidget, VLibrasWidget } from '@/components';
+import { AdOptWidget, JivoChatWidget, VLibrasWidget } from '@/components';
+import { adOptWidgetMetadata } from '@/components/AdOptWidget';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
@@ -13,6 +14,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'Torres Sistemas | Seu negócio na Internet',
+  category: 'technology',
   description: `
   A Torres Sistemas é uma agência de criação de sites com 5+ anos de experiência no ramo. Nosso foco é ajudar empresas a estabelecer uma presença online sólida e eficaz. Como especialistas em desenvolvimento web, oferecemos soluções personalizadas para atender às necessidades específicas de cada cliente.
   
@@ -36,6 +38,9 @@ export const metadata: Metadata = {
       https://sebrae.com.br/sites/PortalSebrae/sebraeaz/5-dicas-para-o-seu-negocio-ter-sucesso-na-internet,a7c6b7a270ecf610VgnVCM1000004c00210aRCRD
 
   Espero que essas dicas sejam úteis para o sucesso contínuo do seu negócio online! 🌟✨`,
+
+  // AdOptWidget
+  other: adOptWidgetMetadata,
 };
 
 export default function RootLayout({
@@ -52,6 +57,7 @@ export default function RootLayout({
 
         <VLibrasWidget />
         <JivoChatWidget />
+        <AdOptWidget />
         <GoogleAnalytics gaId='G-PLX90JBNW5' />
       </body>
     </html>
