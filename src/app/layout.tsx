@@ -1,6 +1,5 @@
-import { AdOptWidget, JivoChatWidget, VLibrasWidget } from '@/components';
-import { adOptWidgetMetadata } from '@/components/AdOptWidget';
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+import { JivoChatWidget, VLibrasWidget } from '@/components';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
@@ -38,9 +37,6 @@ export const metadata: Metadata = {
       https://sebrae.com.br/sites/PortalSebrae/sebraeaz/5-dicas-para-o-seu-negocio-ter-sucesso-na-internet,a7c6b7a270ecf610VgnVCM1000004c00210aRCRD
 
   Espero que essas dicas sejam úteis para o sucesso contínuo do seu negócio online! 🌟✨`,
-
-  // AdOptWidget
-  // other: adOptWidgetMetadata,
 };
 
 export default function RootLayout({
@@ -58,8 +54,6 @@ export default function RootLayout({
         {/* Global Scripts */}
         <VLibrasWidget />
         <JivoChatWidget />
-        {/* <AdOptWidget /> */}
-        {/* <GoogleAnalytics gaId='G-PLX90JBNW5' /> */}
         <GoogleTagManager gtmId='GTM-M7XS2LVM' />
       </body>
     </html>
