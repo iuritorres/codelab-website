@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   Espero que essas dicas sejam úteis para o sucesso contínuo do seu negócio online! 🌟✨`,
 
   // AdOptWidget
-  other: adOptWidgetMetadata,
+  // other: adOptWidgetMetadata,
 };
 
 export default function RootLayout({
