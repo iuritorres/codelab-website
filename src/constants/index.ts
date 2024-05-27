@@ -1,6 +1,6 @@
 import { CardProps } from '@/components/Card';
-
 import { HorizontalCardProps } from '@/components/HorizontalCard';
+
 import account_tree from '../../public/icons/account_tree.svg';
 import calendarMonth from '../../public/icons/calendar_month.svg';
 import checklist from '../../public/icons/checklist.svg';
@@ -9,6 +9,12 @@ import menuBook from '../../public/icons/menu_book.svg';
 import rebase from '../../public/icons/rebase.svg';
 import support_agent from '../../public/icons/support_agent.svg';
 import thumbsUpDown from '../../public/icons/thumbs_up_down.svg';
+
+export const googleTagManagerId = 'GTM-M7XS2LVM';
+
+export const adOptWidgetMetadata = {
+  'adopt-website-id': 'aceffea2-7314-4962-9f9b-c572858279fe',
+};
 
 interface linkInterface {
   label: string;
