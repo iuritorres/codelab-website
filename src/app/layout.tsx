@@ -1,6 +1,6 @@
 import { JivoChatWidget, VLibrasWidget } from '@/components';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
 
@@ -45,7 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR'>
-      <body className={`${montserrat.className} scroll-smooth select-none`}>
+      <body
+        className={`${montserrat.className} min-h-screen scroll-smooth select-none`}
+      >
         {children}
 
         <VLibrasWidget />

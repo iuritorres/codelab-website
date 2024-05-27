@@ -27,7 +27,7 @@ function NavbarItem({ children, className }: NavbarItemProps) {
 
 export function Navbar() {
   return (
-    <div className='w-full bg-light p-7 sm:px-20 lg:px-10 xl:px-28 lg:py-2'>
+    <nav className='w-full bg-light p-7 sm:px-20 lg:px-10 xl:px-28 lg:py-2'>
       <div className='w-full max-container flex flex-col items-center lg:flex-row lg:justify-between'>
         <Link href='/' className='flex items-center gap-1 sm:gap-2 md:gap-1'>
           <Image
@@ -58,6 +58,6 @@ export function Navbar() {
           ))}
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }
