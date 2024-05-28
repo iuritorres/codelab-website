@@ -58,8 +58,9 @@ export default function RootLayout({
         <VLibrasWidget />
         <JivoChatWidget />
         {/* <AdOptWidget /> */}
-        <GoogleTagManager gtmId={googleTagManagerId} />
       </body>
+
+      <GoogleTagManager gtmId={googleTagManagerId} />
     </html>
   );
 }
