@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
   // other: adOptWidgetMetadata, // AdOptWidget
   other: {
-    'google-site-verification': 'google3525ea12ff0860a6.html',
+    'google-site-verification': '_y8EhGrT12I71OBUSDqWslLRK-hFI25OJ1EyLHofHrE',
   },
 };
 
