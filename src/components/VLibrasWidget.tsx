@@ -31,6 +31,7 @@ export function VLibrasWidget() {
       <Script
         async
         onReady={createVLibrasWindow}
+        strategy='afterInteractive'
         src='https://vlibras.gov.br/app/vlibras-plugin.js'
       />
     </>

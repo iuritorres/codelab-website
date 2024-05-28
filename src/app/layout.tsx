@@ -56,13 +56,12 @@ export default function RootLayout({
         className={`${montserrat.className} min-h-screen scroll-smooth select-none`}
       >
         {children}
-
-        {/* Global Scripts */}
-        <VLibrasWidget />
-        <JivoChatWidget />
-        {/* <AdOptWidget /> */}
       </body>
 
+      {/* Global Scripts */}
+      <VLibrasWidget />
+      <JivoChatWidget />
+      {/* <AdOptWidget /> */}
       <GoogleTagManager gtmId={googleTagManagerId} />
     </html>
   );
