@@ -38,11 +38,6 @@ export const metadata: Metadata = {
       https://sebrae.com.br/sites/PortalSebrae/sebraeaz/5-dicas-para-o-seu-negocio-ter-sucesso-na-internet,a7c6b7a270ecf610VgnVCM1000004c00210aRCRD
 
   Espero que essas dicas sejam úteis para o sucesso contínuo do seu negócio online! 🌟✨`,
-
-  other: {
-    'google-site-verification': integrations.googleSiteVerification,
-    // 'adopt-website-id': integrations.adoptWebsiteId,
-  },
 };
 
 export default function RootLayout({
@@ -57,10 +52,8 @@ export default function RootLayout({
       >
         {children}
 
-        {/* Global Scripts */}
         <VLibrasWidget />
         <JivoChatWidget />
-        {/* <AdOptWidget /> */}
       </body>
 
       <GoogleTagManager gtmId={integrations.googleTagManagerId} />

@@ -12,8 +12,6 @@ import thumbsUpDown from '../../public/icons/thumbs_up_down.svg';
 
 export const integrations = {
   googleTagManagerId: 'GTM-M7XS2LVM',
-  googleSiteVerification: '_y8EhGrT12I71OBUSDqWslLRK-hFI25OJ1EyLHofHrE',
-  adoptWebsiteId: 'aceffea2-7314-4962-9f9b-c572858279fe',
 };
 
 interface linkInterface {
