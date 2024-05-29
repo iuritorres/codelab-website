@@ -1,5 +1,5 @@
 import { JivoChatWidget, VLibrasWidget } from '@/components';
-import { googleTagManagerId } from '@/constants';
+import { integrations } from '@/constants';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
@@ -40,7 +40,8 @@ export const metadata: Metadata = {
   Espero que essas dicas sejam úteis para o sucesso contínuo do seu negócio online! 🌟✨`,
 
   other: {
-    'google-site-verification': '_y8EhGrT12I71OBUSDqWslLRK-hFI25OJ1EyLHofHrE',
+    'google-site-verification': integrations.googleSiteVerification,
+    'adopt-website-id': integrations.adoptWebsiteId,
   },
 };
 
@@ -62,7 +63,7 @@ export default function RootLayout({
         {/* <AdOptWidget /> */}
       </body>
 
-      <GoogleTagManager gtmId={googleTagManagerId} />
+      <GoogleTagManager gtmId={integrations.googleTagManagerId} />
     </html>
   );
 }
