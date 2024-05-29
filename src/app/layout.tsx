@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
   other: {
     'google-site-verification': integrations.googleSiteVerification,
-    'adopt-website-id': integrations.adoptWebsiteId,
+    // 'adopt-website-id': integrations.adoptWebsiteId,
   },
 };
 
