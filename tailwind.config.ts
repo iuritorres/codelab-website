@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: ['./src/**/**/*.{js,ts,jsx,tsx,mdx}'],
+  darkMode: 'class',
   theme: {
     fontSize: {
       xs: ['12px', '16px'],
@@ -25,6 +26,9 @@ const config: Config = {
       primary: '#610bd9',
       'primary-dark': '#5617ae',
       secondary: '#d629d9',
+      // blog colors
+      dark: '#1b1b1b',
+      gray: '#747474',
     },
     extend: {
       backgroundImage: {
@@ -41,13 +45,14 @@ const config: Config = {
         primary: '4px',
       },
       fontFamily: {
-        ubuntu: ['var(--font-montserrat)'],
+        montserrat: ['var(--font-montserrat)'],
+        poppins: ['var(--font-poppins)'],
       },
       screens: {
         wide: '1440px',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;
