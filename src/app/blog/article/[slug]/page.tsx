@@ -12,6 +12,11 @@ import { ArticleHeroSection } from '../../_sections';
 
 export default function Article({ params }: { params: { slug: string } }) {
   const article: any = use(getArticle({ slug: params.slug }));
+
+  console.log(process.env.NOTION_ARTICLES_DATABASE_ID);
+  console.log(process.env.NOTION_API_KEY);
+  console.log(article);
+
   const articleContent = use(stringArticleToMDX(article.id));
 
   return (
