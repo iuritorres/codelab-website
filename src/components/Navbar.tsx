@@ -6,12 +6,14 @@ import logo from '../../public/images/logo.svg';
 
 interface NavbarItemProps {
   children: ReactNode;
+  title: string;
   className?: string;
 }
 
-function NavbarItem({ children, className }: NavbarItemProps) {
+function NavbarItem({ children, title, className }: NavbarItemProps) {
   return (
     <li
+      title={title}
       className={`
         font-semibold sm:pe-3 cursor-pointer after:cursor-pointer hover:text-primary relative
         after:content-[''] sm:after:block after:hidden after:w-2 after:h-2 after:absolute
@@ -48,14 +50,33 @@ export function Navbar() {
             flex flex-wrap gap-y-2 sm:justify-between lg:justify-normal lg:gap-12 lg:m-0 lg:p-0 lg:w-auto
           '
         >
-          {navbarLinks.map((navbarLink, index) => (
-            <NavbarItem
-              key={`navbar-link-${navbarLink.label}`}
-              className={index % 2 !== 0 ? 'text-right' : ''}
-            >
-              {navbarLink.label}
-            </NavbarItem>
-          ))}
+          {navbarLinks.map((navbarLink, index) => {
+            if (navbarLink.links.length === 1) {
+              return (
+                <a
+                  key={`navbar-link-${navbarLink.label}`}
+                  href={navbarLink.links[0].link}
+                  title={navbarLink.label}
+                  className='hover:text-primary font-semibold sm:ps-3 cursor-pointer
+                    sm:text-center transition-colors basis-1/2 sm:basis-0 text-right'
+                >
+                  {navbarLink.label}
+                </a>
+              );
+            }
+
+            if (navbarLink.links.length > 1) {
+              return (
+                <NavbarItem
+                  key={`navbar-link-${navbarLink.label}`}
+                  title={navbarLink.label}
+                  className={index % 2 !== 0 ? 'text-right' : ''}
+                >
+                  {navbarLink.label}
+                </NavbarItem>
+              );
+            }
+          })}
         </ul>
       </div>
     </nav>

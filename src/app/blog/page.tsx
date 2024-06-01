@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import { use } from 'react';
-import { getArticles } from './_functions';
+import { formatDate, getArticles } from './_functions';
 
 export default function Blog() {
   const articles = use(getArticles());
@@ -10,15 +11,31 @@ export default function Blog() {
       <FeaturedPosts blogs={allBlogs} />
       <RecentPosts blogs={allBlogs} /> */}
 
-      <h1>Blog</h1>
+      <h1 className='text-4xl font-bold my-14'>Artigos</h1>
 
-      {articles.map((article) => (
-        <article key={article.slug} className='mb-10'>
-          <h2>{article.title}</h2>
-          <p>tags: {article.tags}</p>
-          <p>last updated: {article.lastUpdated}</p>
-        </article>
-      ))}
+      <div className='flex flex-row items-center justify-center gap-8'>
+        {articles.map((article) => (
+          <Link
+            key={article.slug}
+            href={`/article/${article.slug}`}
+            title={article.title}
+            className='mb-10 w-96 h-52 bg-light2 shadow-2xl p-5 rounded-xl transition-transform
+              hover:scale-105 flex-1 flex flex-col justify-between items-start gap-2 cursor-pointer'
+          >
+            <h2 className='font-semibold text-xl'>{article.title}</h2>
+
+            <div>
+              <p className='mb-2'>
+                Tags:{' '}
+                <span className='hover:text-secondary hover:underline transition-colors'>
+                  #{article.tags}
+                </span>
+              </p>
+              <p>Última atualização: {formatDate(article.lastUpdated)}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </main>
   );
 }

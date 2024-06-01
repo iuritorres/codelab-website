@@ -21,14 +21,32 @@ interface linkInterface {
 
 interface navbarLinkInterface {
   label: string;
-  links: { label: string; link: string; icon: string }[];
+  links: { label: string; link: string; icon?: string }[];
 }
 
 export const navbarLinks: navbarLinkInterface[] = [
-  { label: 'Produtos', links: [{ label: '', link: '/', icon: '' }] },
-  { label: 'Clientes', links: [{ label: '', link: '/', icon: '' }] },
-  { label: 'Conteúdos', links: [{ label: '', link: '/', icon: '' }] },
-  { label: 'Bytecode', links: [{ label: '', link: '/', icon: '' }] },
+  {
+    label: 'Produtos',
+    links: [
+      { label: 'a', link: '/', icon: '' },
+      { label: 'b', link: '/', icon: '' },
+    ],
+  },
+  { label: 'Blog', links: [{ label: 'Blog', link: '/blog' }] },
+  {
+    label: 'Clientes',
+    links: [
+      { label: 'a', link: '/', icon: '' },
+      { label: 'b', link: '/', icon: '' },
+    ],
+  },
+  {
+    label: 'Bytecode',
+    links: [
+      { label: 'a', link: '/', icon: '' },
+      { label: 'b', link: '/', icon: '' },
+    ],
+  },
 ];
 
 interface footerLinkInterface {

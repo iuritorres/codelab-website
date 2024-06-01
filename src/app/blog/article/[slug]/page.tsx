@@ -1,20 +1,18 @@
 import { poppins } from '@/styles/fonts';
 import { use } from 'react';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'react-markdown';
 import readingTime from 'reading-time';
-import rehypeAutoLinkHeadings from 'rehype-autolink-headings';
-import rehypePrettyCode from 'rehype-pretty-code';
-import remarkGfm from 'remark-gfm';
-import { ArticleDetails } from '../_components';
-import { getArticle, stringArticleToMDX } from '../_functions';
-import { ArticleHeroSection } from '../_sections';
-import { Remark } from 'react-remark';
+import { ArticleDetails } from '../../_components';
+import {
+  getArticle,
+  getMarkdownComponents,
+  stringArticleToMDX,
+} from '../../_functions';
+import { ArticleHeroSection } from '../../_sections';
 
 export default function Article({ params }: { params: { slug: string } }) {
   const article: any = use(getArticle({ slug: params.slug }));
   const articleContent = use(stringArticleToMDX(article.id));
-
-  console.log(article);
 
   return (
     <article>
@@ -35,7 +33,7 @@ export default function Article({ params }: { params: { slug: string } }) {
         />
       </header>
 
-      <section className='grid grid-cols-12 gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10'>
+      <section className='grid grid-cols-12 gap-y-16 lg:gap-8 mt-8 px-5 md:px-10'>
         <div
           className={`col-span-12 lg:col-span-4 lg:order-2 ${poppins.className}`}
         >
@@ -206,24 +204,9 @@ export default function Article({ params }: { params: { slug: string } }) {
             dark:selection:text-dark dark:selection:bg-light
             first-letter:text-3xl sm:first-letter:text-4xl`}
         >
-          <Remark
-             rehypePlugins={[rehypeAutoLinkHeadings()]}
-              // rehypeReactOptions={{
-              //   components: {
-              //     p: (props) => <p className="custom-paragraph" {...props} />,
-              //   },
-              // }}
-            // rehypePlugins={[
-            //   [rehypeAutolinkHeadings, { behavior: 'append' }],
-            //   [
-            //     rehypePrettyCode,
-            //     { theme: 'github-dark', grid: false, lineNumbers: true },
-            //   ],
-            // ]}
-            // remarkPlugins={[remarkGfm]}
-          >
+          <Markdown components={getMarkdownComponents()}>
             {articleContent}
-          </Remark>
+          </Markdown>
           <div />
         </div>
       </section>
