@@ -57,7 +57,7 @@ export default function Article({ params }: { params: { slug: string } }) {
                     sm:data-[level=three]:pl-6
                     flex items-center justify-start'
                 >
-                  {'two' === 'three' ? (
+                  {String(2) == 'three' ? (
                     <span className='flex w-1 h-1 rounded-full bg-dark mr-2'>
                       &nbsp;
                     </span>
