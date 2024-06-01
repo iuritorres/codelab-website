@@ -17,7 +17,7 @@ export default function Blog() {
         {articles.map((article) => (
           <Link
             key={article.slug}
-            href={`/article/${article.slug}`}
+            href={`blog/article/${article.slug}`}
             title={article.title}
             className='mb-10 w-96 h-52 bg-light2 shadow-2xl p-5 rounded-xl transition-transform
               hover:scale-105 flex-1 flex flex-col justify-between items-start gap-2 cursor-pointer'
