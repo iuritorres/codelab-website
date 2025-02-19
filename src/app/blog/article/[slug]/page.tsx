@@ -1,19 +1,17 @@
-import { poppins } from '@/styles/fonts';
-import { Suspense, use } from 'react';
-import Markdown from 'react-markdown';
-import readingTime from 'reading-time';
-import { ArticleDetails } from '../../_components';
+import { poppins } from "@/styles/fonts";
+import { Suspense, use } from "react";
+import Markdown from "react-markdown";
+import readingTime from "reading-time";
+import { ArticleDetails } from "../../_components";
 import {
   getArticle,
   getMarkdownComponents,
   stringArticleToMDX,
-} from '../../_functions';
-import { ArticleHeroSection } from '../../_sections';
+} from "../../_functions";
+import { ArticleHeroSection } from "../../_sections";
 
 export default function Article({ params }: { params: { slug: string } }) {
   const article: any = use(getArticle({ slug: params.slug }));
-
-  console.log('article', article);
 
   const articleContent = use(stringArticleToMDX(article.id));
 
@@ -31,127 +29,127 @@ export default function Article({ params }: { params: { slug: string } }) {
             createdAt={article.created_time}
             mainTag={article.properties.tags.multi_select[0].name}
             readingTime={readingTime(articleContent).text.replace(
-              ' min read',
-              'min de leitura'
+              " min read",
+              "min de leitura"
             )}
           />
         </header>
 
-        <section className='grid grid-cols-12 gap-y-16 lg:gap-8 mt-8 px-5 md:px-10'>
+        <section className="grid grid-cols-12 gap-y-16 lg:gap-8 mt-8 px-5 md:px-10">
           <div
             className={`col-span-12 lg:col-span-4 lg:order-2 ${poppins.className}`}
           >
             <details
-              className='border-[1px] border-solid border-dark dark:border-white text-dark dark:text-white
-            rounded-lg p-4 sticky top-6 max-h-[80vh] overflow-hidden overflow-y-auto media'
+              className="border-[1px] border-solid border-dark dark:border-white text-dark dark:text-white
+            rounded-lg p-4 sticky top-6 max-h-[80vh] overflow-hidden overflow-y-auto media"
               open
             >
-              <summary className='text-lg font-semibold capitalize cursor-pointer'>
+              <summary className="text-lg font-semibold capitalize cursor-pointer">
                 Sumário
               </summary>
 
-              <ul className='mt-4 text-base'>
-                <li className='py-1'>
+              <ul className="mt-4 text-base">
+                <li className="py-1">
                   <a
                     href={`#`}
-                    data-level='two'
-                    className='data-[level=two]:pl-0  data-[level=two]:pt-2
+                    data-level="two"
+                    className="data-[level=two]:pl-0  data-[level=two]:pt-2
                     data-[level=two]:border-t border-solid border-dark/40
                     data-[level=three]:pl-4
                     sm:data-[level=three]:pl-6
-                    flex items-center justify-start'
+                    flex items-center justify-start"
                   >
-                    {String(2) == 'three' ? (
-                      <span className='flex w-1 h-1 rounded-full bg-dark mr-2'>
+                    {String(2) == "three" ? (
+                      <span className="flex w-1 h-1 rounded-full bg-dark mr-2">
                         &nbsp;
                       </span>
                     ) : null}
 
-                    <span className='hover:underline hover:text-primary'>
+                    <span className="hover:underline hover:text-primary">
                       Title 1
                     </span>
                   </a>
                 </li>
-                <li className='py-1'>
+                <li className="py-1">
                   <a
                     href={`#`}
-                    data-level='three'
-                    className='data-[level=two]:pl-0  data-[level=two]:pt-2
+                    data-level="three"
+                    className="data-[level=two]:pl-0  data-[level=two]:pt-2
                           data-[level=two]:border-t border-solid border-dark/40
                           data-[level=three]:pl-4
                           sm:data-[level=three]:pl-6
-                          flex items-center justify-start'
+                          flex items-center justify-start"
                   >
-                    {'three' === 'three' ? (
-                      <span className='flex w-1 h-1 rounded-full bg-dark mr-2'>
+                    {"three" === "three" ? (
+                      <span className="flex w-1 h-1 rounded-full bg-dark mr-2">
                         &nbsp;
                       </span>
                     ) : null}
 
-                    <span className='hover:underline hover:text-primary'>
+                    <span className="hover:underline hover:text-primary">
                       Subtitle 1
                     </span>
                   </a>
                 </li>
-                <li className='py-1'>
+                <li className="py-1">
                   <a
                     href={`#`}
-                    data-level='three'
-                    className='data-[level=two]:pl-0  data-[level=two]:pt-2
+                    data-level="three"
+                    className="data-[level=two]:pl-0  data-[level=two]:pt-2
                           data-[level=two]:border-t border-solid border-dark/40
                           data-[level=three]:pl-4
                           sm:data-[level=three]:pl-6
-                          flex items-center justify-start'
+                          flex items-center justify-start"
                   >
-                    {'three' === 'three' ? (
-                      <span className='flex w-1 h-1 rounded-full bg-dark mr-2'>
+                    {"three" === "three" ? (
+                      <span className="flex w-1 h-1 rounded-full bg-dark mr-2">
                         &nbsp;
                       </span>
                     ) : null}
 
-                    <span className='hover:underline hover:text-primary'>
+                    <span className="hover:underline hover:text-primary">
                       Subtitle 2
                     </span>
                   </a>
                 </li>
-                <li className='py-1'>
+                <li className="py-1">
                   <a
                     href={`#`}
-                    data-level='three'
-                    className='data-[level=two]:pl-0  data-[level=two]:pt-2
+                    data-level="three"
+                    className="data-[level=two]:pl-0  data-[level=two]:pt-2
                           data-[level=two]:border-t border-solid border-dark/40
                           data-[level=three]:pl-4
                           sm:data-[level=three]:pl-6
-                          flex items-center justify-start'
+                          flex items-center justify-start"
                   >
-                    {'three' === 'three' ? (
-                      <span className='flex w-1 h-1 rounded-full bg-dark mr-2'>
+                    {"three" === "three" ? (
+                      <span className="flex w-1 h-1 rounded-full bg-dark mr-2">
                         &nbsp;
                       </span>
                     ) : null}
 
-                    <span className='hover:underline hover:text-primary'>
+                    <span className="hover:underline hover:text-primary">
                       Subtitle 2
                     </span>
                   </a>
                 </li>
-                <li className='py-1'>
+                <li className="py-1">
                   <a
                     href={`#`}
-                    data-level='three'
-                    className='data-[level=two]:pl-0  data-[level=two]:pt-2
+                    data-level="three"
+                    className="data-[level=two]:pl-0  data-[level=two]:pt-2
                           data-[level=two]:border-t border-solid border-dark/40
                           data-[level=three]:pl-4
                           sm:data-[level=three]:pl-6
-                          flex items-center justify-start'
+                          flex items-center justify-start"
                   >
-                    {'three' === 'three' ? (
-                      <span className='flex w-1 h-1 rounded-full bg-dark mr-2'>
+                    {"three" === "three" ? (
+                      <span className="flex w-1 h-1 rounded-full bg-dark mr-2">
                         &nbsp;
                       </span>
                     ) : null}
 
-                    <span className='hover:underline hover:text-primary'>
+                    <span className="hover:underline hover:text-primary">
                       Subtitle 2
                     </span>
                   </a>
