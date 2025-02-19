@@ -4,7 +4,7 @@ import { infoCardsData } from '@/constants';
 
 export function InfoCards() {
   return (
-    <section className='w-auto wide:max-container flex flex-wrap gap-7'>
+    <section className='w-auto wide:max-container wide:px-10 flex flex-wrap gap-7'>
       {infoCardsData.map((cardProps: CardProps) => (
         <Card
           {...cardProps}
